@@ -1,12 +1,12 @@
-import * as allIconDefs from "@ant-design/icons-svg";
-import { IconDefinition } from "@ant-design/icons-svg/es/types";
-import * as path from "path";
-import * as fs from "fs";
-import { promisify } from "util";
+// import * as allIconDefs from "@ant-design/icons-svg";
+import { IconDefinition } from '@ant-design/icons-svg/es/types';
+import * as path from 'path';
+import * as fs from 'fs';
+import { promisify } from 'util';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { template } from "lodash";
-import * as allTestIcon from "../vendors";
-import G = require("glob");
+import { template } from 'lodash';
+import * as allTestIcon from '../vendors/asn';
+// import G = require("glob");
 
 const writeFile = promisify(fs.writeFile);
 
@@ -15,14 +15,16 @@ interface IconDefinitionWithIdentifier extends IconDefinition {
 }
 
 function walk<T>(fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
-  console.log({ allTestIcon });
+  // console.log({ allTestIcon });
 
   return Promise.all(
     Object.keys(allTestIcon).map((svgIdentifier) => {
-      const iconDef = (allTestIcon as { [id: string]: IconDefinition })[svgIdentifier];
+      const iconDef = (allTestIcon as { [id: string]: IconDefinition })[
+        svgIdentifier
+      ];
 
-      console.log("walk", { svgIdentifier });
-      console.log({ iconDef });
+      // console.log("walk", { svgIdentifier });
+      // console.log({ iconDef });
 
       return fn({ svgIdentifier, ...iconDef });
     })
@@ -30,7 +32,7 @@ function walk<T>(fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
 }
 
 async function generateIcons() {
-  const iconsDir = path.join(__dirname, "../src/icons");
+  const iconsDir = path.join(__dirname, '../src/icons');
   try {
     await promisify(fs.access)(iconsDir);
   } catch (err) {
@@ -39,26 +41,25 @@ async function generateIcons() {
 
   const render = template(
     `
-      // GENERATE BY ./scripts/generate.ts
-      // DON NOT EDIT IT MANUALLY
+// GENERATE BY ./scripts/generate.ts
+// DO NOT EDIT IT MANUALLY
 
-      import * as React from 'react'
-      // import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdentifier %>';
-      import <%= svgIdentifier %>Svg from '../../vendors/<%= svgIdentifier %>';
-      import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import * as React from 'react'
+import <%= svgIdentifier %>Svg from '../../vendors/asn/<%= svgIdentifier %>';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-      const <%= svgIdentifier %> = (
-        props: AntdIconProps,
-        ref: React.MutableRefObject<HTMLSpanElement>,
-      ) => <AntdIcon {...props} ref={ref} icon={<%= svgIdentifier %>Svg} />;
+const <%= svgIdentifier %> = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={<%= svgIdentifier %>Svg} />;
 
-      <%= svgIdentifier %>.displayName = '<%= svgIdentifier %>';
-      export default React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
-    `.trim()
+<%= svgIdentifier %>.displayName = '<%= svgIdentifier %>';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
+`.trim()
   );
 
   await walk(async ({ svgIdentifier }) => {
-    console.log({ svgIdentifier });
+    // console.log({ svgIdentifier });
 
     // generate icon file
     await writeFile(
@@ -70,37 +71,40 @@ async function generateIcons() {
   // generate icon index
   const entryText = Object.keys(allTestIcon)
     .sort()
-    .map((svgIdentifier) => `export { default as ${svgIdentifier} } from './${svgIdentifier}';`)
-    .join("\n");
+    .map(
+      (svgIdentifier) =>
+        `export { default as ${svgIdentifier} } from './${svgIdentifier}';`
+    )
+    .join('\n');
 
   await promisify(fs.appendFile)(
-    path.resolve(__dirname, "../src/icons/index.tsx"),
+    path.resolve(__dirname, '../src/icons/index.tsx'),
     `
-      // GENERATE BY ./scripts/generate.ts
-      // DON NOT EDIT IT MANUALLY
+// GENERATE BY ./scripts/generate.ts
+// DO NOT EDIT IT MANUALLY
 
-      ${entryText}
-    `.trim()
+${entryText}
+`.trim()
   );
 }
 
 async function generateEntries() {
   const render = template(
     `
-      'use strict';
-        Object.defineProperty(exports, "__esModule", {
-          value: true
-        });
-        exports.default = void 0;
+'use strict';
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
 
-        var _<%= svgIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= svgIdentifier %>'));
+  var _<%= svgIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= svgIdentifier %>'));
 
-        function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-        var _default = _<%= svgIdentifier %>;
-        exports.default = _default;
-        module.exports = _default;
-    `.trim()
+  var _default = _<%= svgIdentifier %>;
+  exports.default = _default;
+  module.exports = _default;
+`.trim()
   );
 
   await walk(async ({ svgIdentifier }) => {
@@ -108,7 +112,7 @@ async function generateEntries() {
     await writeFile(
       path.resolve(__dirname, `../${svgIdentifier}.js`),
       render({
-        svgIdentifier,
+        svgIdentifier
       })
     );
 
@@ -120,10 +124,10 @@ async function generateEntries() {
   });
 }
 
-if (process.argv[2] === "--target=icon") {
+if (process.argv[2] === '--target=icon') {
   generateIcons();
 }
 
-if (process.argv[2] === "--target=entry") {
+if (process.argv[2] === '--target=entry') {
   generateEntries();
 }

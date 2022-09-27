@@ -1,7 +1,7 @@
-import { ThemeType } from "@ant-design/icons-svg/lib/types";
-import * as React from "react";
-import styled from "styled-components";
-import * as AntdIcons from "../../src/icons";
+import { ThemeType } from '@ant-design/icons-svg/lib/types';
+import * as React from 'react';
+import styled from 'styled-components';
+import * as AntdIcons from '../../src/icons';
 
 const Container = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ const NameDescription = styled.p`
   display: block;
   text-align: center;
   transform: scale(0.83);
-  font-family: "Lucida Console", Consolas;
+  font-family: 'Lucida Console', Consolas;
   white-space: nowrap;
 `;
 
@@ -30,7 +30,7 @@ const allIcons: {
 } = AntdIcons;
 
 const AllIconDemo = () => {
-  const [currentTheme, setCurrentTheme] = React.useState("Outlined");
+  const [currentTheme, setCurrentTheme] = React.useState('Outlined');
 
   const handleSelectChange = React.useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.currentTarget.value as ThemeType;
@@ -43,9 +43,9 @@ const AllIconDemo = () => {
   );
 
   return (
-    <div style={{ color: "#555" }}>
-      <h1 style={{ textAlign: "center" }}>All Icons</h1>
-      <div style={{ textAlign: "center" }}>
+    <div style={{ color: '#555' }}>
+      <h1 style={{ textAlign: 'center' }}>All Icons</h1>
+      <div style={{ textAlign: 'center' }}>
         <select name="theme-select" value={currentTheme} onChange={handleSelectChange}>
           <option value="Filled">Filled</option>
           <option value="Outlined">Outlined</option>
@@ -57,7 +57,7 @@ const AllIconDemo = () => {
           const Component = allIcons[iconName];
           return (
             <Card key={iconName}>
-              <Component style={{ fontSize: "48px", color: "coral" }} />
+              <Component style={{ fontSize: '30px', color: 'coral' }} />
               <NameDescription>{iconName}</NameDescription>
             </Card>
           );

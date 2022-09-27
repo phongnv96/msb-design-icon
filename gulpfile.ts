@@ -1,23 +1,23 @@
-import { series, parallel } from 'gulp';
+import { readFileSync } from 'fs';
+import { parallel, series } from 'gulp';
+import { resolve } from 'path';
+import { twotoneStringify } from './plugins/svg2Definition/stringify';
 import {
-  clean,
-  copy,
-  generateIcons,
-  generateEntry,
-  generateInline
-} from './tasks/creators';
-import { generalConfig, remainFillConfig } from './plugins/svgo/presets';
-import {
-  assignAttrsAtTag,
   adjustViewBox,
+  assignAttrsAtTag,
   setDefaultColorAtPathTag
 } from './plugins/svg2Definition/transforms';
-import { twotoneStringify } from './plugins/svg2Definition/stringify';
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
-import { getIdentifier } from './utils';
-import { IconDefinition } from './templates/types';
+import { generalConfig, remainFillConfig } from './plugins/svgo/presets';
+import {
+  clean,
+  generateEntry,
+  // copy,
+  generateIcons,
+  generateInline
+} from './tasks/creators';
 import { ExtractRegExp } from './tasks/creators/generateInline';
+import { IconDefinition } from './templates/types';
+import { getIdentifier } from './utils';
 
 const iconTemplate = readFileSync(
   resolve(__dirname, './templates/icon.ts.ejs'),
@@ -26,20 +26,20 @@ const iconTemplate = readFileSync(
 
 export default series(
   // 1. clean
-  clean(['src', 'inline-svg', 'es', 'lib']),
+  clean(['inline-svg', 'inline-namespaced-svg', 'es', 'lib']),
 
   parallel(
     // 2.1 copy helpers.ts, types.ts
-    copy({
-      from: ['templates/*.ts'],
-      toDir: 'src'
-    }),
+    // copy({
+    //   from: ['templates/*.ts'],
+    //   toDir: 'src'
+    // }),
 
     // 2.2 generate abstract node with the theme "filled"
     generateIcons({
       theme: 'filled',
-      from: ['svg/filled/*.svg'],
-      toDir: 'src/asn',
+      from: ['vendors/svg/filled/*.svg'],
+      toDir: 'vendors/asn',
       svgoConfig: generalConfig,
       extraNodeTransformFactories: [
         assignAttrsAtTag('svg', { focusable: 'false' }),
@@ -57,8 +57,8 @@ export default series(
     // 2.2 generate abstract node with the theme "outlined"
     generateIcons({
       theme: 'outlined',
-      from: ['svg/outlined/*.svg'],
-      toDir: 'src/asn',
+      from: ['vendors/svg/outlined/*.svg'],
+      toDir: 'vendors/asn',
       svgoConfig: generalConfig,
       extraNodeTransformFactories: [
         assignAttrsAtTag('svg', { focusable: 'false' }),
@@ -76,8 +76,8 @@ export default series(
     // 2.3 generate abstract node with the theme "outlined"
     generateIcons({
       theme: 'twotone',
-      from: ['svg/twotone/*.svg'],
-      toDir: 'src/asn',
+      from: ['vendors/svg/twotone/*.svg'],
+      toDir: 'vendors/asn',
       svgoConfig: remainFillConfig,
       extraNodeTransformFactories: [
         assignAttrsAtTag('svg', { focusable: 'false' }),
@@ -97,19 +97,19 @@ export default series(
     // 3.1 generate entry file: src/index.ts
     generateEntry({
       entryName: 'index.ts',
-      from: ['src/asn/*.ts'],
-      toDir: 'src',
+      from: ['vendors/asn/*.ts'],
+      toDir: 'vendors/asn',
       banner: '// This index.ts file is generated automatically.\n',
       template: `export { default as <%= identifier %> } from '<%= path %>';`,
       mapToInterpolate: ({ name: identifier }) => ({
         identifier,
-        path: `./asn/${identifier}`
+        path: `./${identifier}`
       })
     }),
 
     // 3.2 generate inline SVG files
     generateInline({
-      from: ['src/asn/*.ts'],
+      from: ['vendors/asn/*.ts'],
       toDir: ({ _meta }) => `inline-svg/${_meta && _meta.theme}`,
       getIconDefinitionFromSource: (content: string): IconDefinition => {
         const extract = ExtractRegExp.exec(content);
@@ -121,7 +121,7 @@ export default series(
     }),
     // 3.3 generate inline SVG files with namespace
     generateInline({
-      from: ['src/asn/*.ts'],
+      from: ['vendors/asn/*.ts'],
       toDir: ({ _meta }) => `inline-namespaced-svg/${_meta && _meta.theme}`,
       getIconDefinitionFromSource: (content: string): IconDefinition => {
         const extract = ExtractRegExp.exec(content);
