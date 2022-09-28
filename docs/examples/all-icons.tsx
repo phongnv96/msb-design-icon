@@ -57,7 +57,7 @@ const AllIconDemo = () => {
           const Component = allIcons[iconName];
           return (
             <Card key={iconName}>
-              <Component style={{ fontSize: '30px', color: 'coral' }} />
+              <Component style={{ fontSize: '30px' }} />
               <NameDescription>{iconName}</NameDescription>
             </Card>
           );
