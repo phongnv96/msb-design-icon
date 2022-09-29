@@ -15,16 +15,9 @@ interface IconDefinitionWithIdentifier extends IconDefinition {
 }
 
 function walk<T>(fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
-  // console.log({ allTestIcon });
-
   return Promise.all(
     Object.keys(allTestIcon).map((svgIdentifier) => {
-      const iconDef = (allTestIcon as { [id: string]: IconDefinition })[
-        svgIdentifier
-      ];
-
-      // console.log("walk", { svgIdentifier });
-      // console.log({ iconDef });
+      const iconDef = (allTestIcon as { [id: string]: IconDefinition })[svgIdentifier];
 
       return fn({ svgIdentifier, ...iconDef });
     })
@@ -54,13 +47,15 @@ const <%= svgIdentifier %> = (
 ) => <AntdIcon {...props} ref={ref} icon={<%= svgIdentifier %>Svg} />;
 
 <%= svgIdentifier %>.displayName = '<%= svgIdentifier %>';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
 `.trim()
   );
 
   await walk(async ({ svgIdentifier }) => {
-    // console.log({ svgIdentifier });
-
     // generate icon file
     await writeFile(
       path.resolve(__dirname, `../src/icons/${svgIdentifier}.tsx`),
@@ -71,10 +66,7 @@ export default React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifie
   // generate icon index
   const entryText = Object.keys(allTestIcon)
     .sort()
-    .map(
-      (svgIdentifier) =>
-        `export { default as ${svgIdentifier} } from './${svgIdentifier}';`
-    )
+    .map((svgIdentifier) => `export { default as ${svgIdentifier} } from './${svgIdentifier}';`)
     .join('\n');
 
   await promisify(fs.appendFile)(

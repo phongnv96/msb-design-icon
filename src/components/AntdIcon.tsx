@@ -1,12 +1,12 @@
-import * as React from "react";
-import classNames from "classnames";
-import type { IconDefinition } from "@ant-design/icons-svg/lib/types";
+import * as React from 'react';
+import classNames from 'classnames';
+import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
 
-import Context from "./Context";
-import type { IconBaseProps } from "./Icon";
-import ReactIcon from "./IconBase";
-import { getTwoToneColor, TwoToneColor, setTwoToneColor } from "./twoTonePrimaryColor";
-import { normalizeTwoToneColors } from "../utils";
+import Context from './Context';
+import type { IconBaseProps } from './Icon';
+import ReactIcon from './IconBase';
+import { getTwoToneColor, TwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
+import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
   twoToneColor?: TwoToneColor;
@@ -18,7 +18,7 @@ export interface IconComponentProps extends AntdIconProps {
 
 // Initial setting
 // should move it to antd main repo?
-setTwoToneColor("#1890ff");
+setTwoToneColor('#1890ff');
 
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
 interface IconBaseComponent<Props>
@@ -31,30 +31,24 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
   const {
     // affect outter <i>...</i>
     className,
-
     // affect inner <svg>...</svg>
     icon,
     spin,
     rotate,
-
     tabIndex,
     onClick,
-
     // other
     twoToneColor,
-
     ...restProps
   } = props;
 
-  console.log({ restProps, props });
-
-  const { prefixCls = "anticon" } = React.useContext(Context);
+  const { prefixCls = 'anticon' } = React.useContext(Context);
 
   const classString = classNames(
     prefixCls,
     {
       [`${prefixCls}-${icon.name}`]: !!icon.name,
-      [`${prefixCls}-spin`]: !!spin || icon.name === "loading",
+      [`${prefixCls}-spin`]: !!spin || icon.name === 'loading'
     },
     className
   );
@@ -67,7 +61,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
   const svgStyle = rotate
     ? {
         msTransform: `rotate(${rotate}deg)`,
-        transform: `rotate(${rotate}deg)`,
+        transform: `rotate(${rotate}deg)`
       }
     : undefined;
 
@@ -93,7 +87,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
   );
 }) as IconBaseComponent<IconComponentProps>;
 
-Icon.displayName = "AntdIcon";
+Icon.displayName = 'AntdIcon';
 Icon.getTwoToneColor = getTwoToneColor;
 Icon.setTwoToneColor = setTwoToneColor;
 
