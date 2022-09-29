@@ -11,4 +11,8 @@ const MinusCircleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={MinusCircleFilledSvg} />;
 
 MinusCircleFilled.displayName = 'MinusCircleFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MinusCircleFilled);

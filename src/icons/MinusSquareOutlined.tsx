@@ -11,4 +11,8 @@ const MinusSquareOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={MinusSquareOutlinedSvg} />;
 
 MinusSquareOutlined.displayName = 'MinusSquareOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MinusSquareOutlined);

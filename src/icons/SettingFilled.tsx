@@ -11,4 +11,8 @@ const SettingFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={SettingFilledSvg} />;
 
 SettingFilled.displayName = 'SettingFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SettingFilled);

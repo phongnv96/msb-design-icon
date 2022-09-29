@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production && npm run build:es && npm run build:lib",
+    "build-clear": "rimraf es && rimraf lib",
     "build:es": "tsc --project tsconfig.build.json --module esnext --outDir es",
     "build:lib": "tsc --project tsconfig.build.json --module commonjs --outDir lib",
     "ci": "NODE_ENV=ci npm run prepublishOnly",

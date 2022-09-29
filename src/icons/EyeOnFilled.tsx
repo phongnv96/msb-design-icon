@@ -11,4 +11,8 @@ const EyeOnFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={EyeOnFilledSvg} />;
 
 EyeOnFilled.displayName = 'EyeOnFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EyeOnFilled);

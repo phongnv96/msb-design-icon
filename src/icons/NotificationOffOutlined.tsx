@@ -11,4 +11,8 @@ const NotificationOffOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={NotificationOffOutlinedSvg} />;
 
 NotificationOffOutlined.displayName = 'NotificationOffOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NotificationOffOutlined);

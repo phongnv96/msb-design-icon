@@ -11,4 +11,8 @@ const FullScreenOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FullScreenOutlinedSvg} />;
 
 FullScreenOutlined.displayName = 'FullScreenOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FullScreenOutlined);

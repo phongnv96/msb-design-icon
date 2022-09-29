@@ -11,4 +11,8 @@ const LeftCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={LeftCircleOutlinedSvg} />;
 
 LeftCircleOutlined.displayName = 'LeftCircleOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LeftCircleOutlined);

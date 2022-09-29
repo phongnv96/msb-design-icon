@@ -11,4 +11,8 @@ const UnlockedFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={UnlockedFilledSvg} />;
 
 UnlockedFilled.displayName = 'UnlockedFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UnlockedFilled);

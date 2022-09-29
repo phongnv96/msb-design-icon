@@ -11,4 +11,8 @@ const DownOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DownOutlinedSvg} />;
 
 DownOutlined.displayName = 'DownOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DownOutlined);

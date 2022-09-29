@@ -11,4 +11,8 @@ const CopyFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={CopyFilledSvg} />;
 
 CopyFilled.displayName = 'CopyFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyFilled);

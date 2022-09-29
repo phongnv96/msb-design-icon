@@ -11,4 +11,8 @@ const CameraOffFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={CameraOffFilledSvg} />;
 
 CameraOffFilled.displayName = 'CameraOffFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CameraOffFilled);

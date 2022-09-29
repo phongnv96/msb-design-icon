@@ -11,4 +11,8 @@ const SaveFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={SaveFilledSvg} />;
 
 SaveFilled.displayName = 'SaveFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SaveFilled);

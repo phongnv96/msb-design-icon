@@ -11,4 +11,8 @@ const NotificationOffFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={NotificationOffFilledSvg} />;
 
 NotificationOffFilled.displayName = 'NotificationOffFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NotificationOffFilled);

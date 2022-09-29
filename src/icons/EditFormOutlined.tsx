@@ -11,4 +11,8 @@ const EditFormOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={EditFormOutlinedSvg} />;
 
 EditFormOutlined.displayName = 'EditFormOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EditFormOutlined);

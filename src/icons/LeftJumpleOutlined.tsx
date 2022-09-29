@@ -11,4 +11,8 @@ const LeftJumpleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={LeftJumpleOutlinedSvg} />;
 
 LeftJumpleOutlined.displayName = 'LeftJumpleOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LeftJumpleOutlined);

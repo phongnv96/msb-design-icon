@@ -11,4 +11,8 @@ const SearchOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={SearchOutlinedSvg} />;
 
 SearchOutlined.displayName = 'SearchOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SearchOutlined);

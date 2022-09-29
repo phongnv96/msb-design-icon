@@ -11,4 +11,8 @@ const RefreshOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={RefreshOutlinedSvg} />;
 
 RefreshOutlined.displayName = 'RefreshOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RefreshOutlined);

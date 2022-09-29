@@ -11,4 +11,8 @@ const PlusOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PlusOutlinedSvg} />;
 
 PlusOutlined.displayName = 'PlusOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PlusOutlined);

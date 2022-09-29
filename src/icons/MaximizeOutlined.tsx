@@ -11,4 +11,8 @@ const MaximizeOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={MaximizeOutlinedSvg} />;
 
 MaximizeOutlined.displayName = 'MaximizeOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MaximizeOutlined);

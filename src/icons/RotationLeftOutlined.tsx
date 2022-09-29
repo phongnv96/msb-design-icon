@@ -11,4 +11,8 @@ const RotationLeftOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={RotationLeftOutlinedSvg} />;
 
 RotationLeftOutlined.displayName = 'RotationLeftOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RotationLeftOutlined);

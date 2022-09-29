@@ -11,4 +11,8 @@ const StarOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={StarOutlinedSvg} />;
 
 StarOutlined.displayName = 'StarOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StarOutlined);

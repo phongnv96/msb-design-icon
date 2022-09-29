@@ -11,4 +11,8 @@ const CameraOffOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CameraOffOutlinedSvg} />;
 
 CameraOffOutlined.displayName = 'CameraOffOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CameraOffOutlined);

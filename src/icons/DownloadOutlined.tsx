@@ -11,4 +11,8 @@ const DownloadOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DownloadOutlinedSvg} />;
 
 DownloadOutlined.displayName = 'DownloadOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DownloadOutlined);

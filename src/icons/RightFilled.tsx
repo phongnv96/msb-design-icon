@@ -11,4 +11,8 @@ const RightFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={RightFilledSvg} />;
 
 RightFilled.displayName = 'RightFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RightFilled);

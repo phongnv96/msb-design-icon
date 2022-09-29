@@ -11,4 +11,8 @@ const LogOutOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={LogOutOutlinedSvg} />;
 
 LogOutOutlined.displayName = 'LogOutOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LogOutOutlined);

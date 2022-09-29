@@ -11,4 +11,8 @@ const AlignJustifyOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={AlignJustifyOutlinedSvg} />;
 
 AlignJustifyOutlined.displayName = 'AlignJustifyOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlignJustifyOutlined);

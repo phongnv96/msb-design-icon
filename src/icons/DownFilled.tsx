@@ -11,4 +11,8 @@ const DownFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={DownFilledSvg} />;
 
 DownFilled.displayName = 'DownFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DownFilled);

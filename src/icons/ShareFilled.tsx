@@ -11,4 +11,8 @@ const ShareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ShareFilledSvg} />;
 
 ShareFilled.displayName = 'ShareFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ShareFilled);

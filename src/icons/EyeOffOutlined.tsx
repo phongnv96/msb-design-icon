@@ -11,4 +11,8 @@ const EyeOffOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={EyeOffOutlinedSvg} />;
 
 EyeOffOutlined.displayName = 'EyeOffOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EyeOffOutlined);

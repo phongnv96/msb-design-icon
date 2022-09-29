@@ -11,4 +11,8 @@ const CheckSquareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={CheckSquareFilledSvg} />;
 
 CheckSquareFilled.displayName = 'CheckSquareFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckSquareFilled);

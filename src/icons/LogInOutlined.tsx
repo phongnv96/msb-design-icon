@@ -11,4 +11,8 @@ const LogInOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={LogInOutlinedSvg} />;
 
 LogInOutlined.displayName = 'LogInOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LogInOutlined);

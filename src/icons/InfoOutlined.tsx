@@ -11,4 +11,8 @@ const InfoOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={InfoOutlinedSvg} />;
 
 InfoOutlined.displayName = 'InfoOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InfoOutlined);

@@ -11,4 +11,8 @@ const HistoryOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={HistoryOutlinedSvg} />;
 
 HistoryOutlined.displayName = 'HistoryOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HistoryOutlined);

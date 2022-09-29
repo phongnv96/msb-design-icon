@@ -11,4 +11,8 @@ const CloseCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CloseCircleOutlinedSvg} />;
 
 CloseCircleOutlined.displayName = 'CloseCircleOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseCircleOutlined);

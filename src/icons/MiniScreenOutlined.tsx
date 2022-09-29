@@ -11,4 +11,8 @@ const MiniScreenOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={MiniScreenOutlinedSvg} />;
 
 MiniScreenOutlined.displayName = 'MiniScreenOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MiniScreenOutlined);

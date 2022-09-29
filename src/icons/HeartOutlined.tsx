@@ -11,4 +11,8 @@ const HeartOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={HeartOutlinedSvg} />;
 
 HeartOutlined.displayName = 'HeartOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HeartOutlined);

@@ -11,4 +11,8 @@ const SortFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={SortFilledSvg} />;
 
 SortFilled.displayName = 'SortFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SortFilled);

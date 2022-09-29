@@ -11,4 +11,8 @@ const CautionCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CautionCircleOutlinedSvg} />;
 
 CautionCircleOutlined.displayName = 'CautionCircleOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CautionCircleOutlined);

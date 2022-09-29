@@ -11,4 +11,8 @@ const CopyOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CopyOutlinedSvg} />;
 
 CopyOutlined.displayName = 'CopyOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyOutlined);

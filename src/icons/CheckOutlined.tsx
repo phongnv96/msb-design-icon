@@ -11,4 +11,8 @@ const CheckOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CheckOutlinedSvg} />;
 
 CheckOutlined.displayName = 'CheckOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckOutlined);

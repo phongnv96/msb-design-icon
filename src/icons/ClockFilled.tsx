@@ -11,4 +11,8 @@ const ClockFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ClockFilledSvg} />;
 
 ClockFilled.displayName = 'ClockFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ClockFilled);

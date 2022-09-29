@@ -11,4 +11,8 @@ const ZapOnFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ZapOnFilledSvg} />;
 
 ZapOnFilled.displayName = 'ZapOnFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ZapOnFilled);

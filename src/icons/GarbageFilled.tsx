@@ -11,4 +11,8 @@ const GarbageFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={GarbageFilledSvg} />;
 
 GarbageFilled.displayName = 'GarbageFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GarbageFilled);

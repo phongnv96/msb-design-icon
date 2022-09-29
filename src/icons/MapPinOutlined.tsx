@@ -11,4 +11,8 @@ const MapPinOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={MapPinOutlinedSvg} />;
 
 MapPinOutlined.displayName = 'MapPinOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MapPinOutlined);

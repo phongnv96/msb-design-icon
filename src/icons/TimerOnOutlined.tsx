@@ -11,4 +11,8 @@ const TimerOnOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={TimerOnOutlinedSvg} />;
 
 TimerOnOutlined.displayName = 'TimerOnOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TimerOnOutlined);

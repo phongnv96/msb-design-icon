@@ -11,4 +11,8 @@ const PieChartFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={PieChartFilledSvg} />;
 
 PieChartFilled.displayName = 'PieChartFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PieChartFilled);

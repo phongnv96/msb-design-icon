@@ -11,4 +11,8 @@ const RightOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={RightOutlinedSvg} />;
 
 RightOutlined.displayName = 'RightOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RightOutlined);

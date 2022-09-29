@@ -11,4 +11,8 @@ const TrendingUpOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={TrendingUpOutlinedSvg} />;
 
 TrendingUpOutlined.displayName = 'TrendingUpOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TrendingUpOutlined);

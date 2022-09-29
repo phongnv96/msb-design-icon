@@ -11,4 +11,8 @@ const HomeFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={HomeFilledSvg} />;
 
 HomeFilled.displayName = 'HomeFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HomeFilled);

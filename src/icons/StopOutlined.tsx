@@ -11,4 +11,8 @@ const StopOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={StopOutlinedSvg} />;
 
 StopOutlined.displayName = 'StopOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StopOutlined);

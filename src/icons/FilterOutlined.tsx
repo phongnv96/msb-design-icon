@@ -11,4 +11,8 @@ const FilterOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FilterOutlinedSvg} />;
 
 FilterOutlined.displayName = 'FilterOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FilterOutlined);

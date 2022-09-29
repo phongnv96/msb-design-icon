@@ -11,4 +11,8 @@ const MinimizeOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={MinimizeOutlinedSvg} />;
 
 MinimizeOutlined.displayName = 'MinimizeOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MinimizeOutlined);

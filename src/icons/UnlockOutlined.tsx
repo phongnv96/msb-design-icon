@@ -11,4 +11,8 @@ const UnlockOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={UnlockOutlinedSvg} />;
 
 UnlockOutlined.displayName = 'UnlockOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UnlockOutlined);

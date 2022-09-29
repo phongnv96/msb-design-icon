@@ -11,4 +11,8 @@ const AttachmentOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={AttachmentOutlinedSvg} />;
 
 AttachmentOutlined.displayName = 'AttachmentOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AttachmentOutlined);

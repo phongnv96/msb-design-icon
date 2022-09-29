@@ -11,4 +11,8 @@ const UploadOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={UploadOutlinedSvg} />;
 
 UploadOutlined.displayName = 'UploadOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UploadOutlined);

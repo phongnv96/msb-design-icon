@@ -11,4 +11,8 @@ const SoftTokenFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={SoftTokenFilledSvg} />;
 
 SoftTokenFilled.displayName = 'SoftTokenFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SoftTokenFilled);

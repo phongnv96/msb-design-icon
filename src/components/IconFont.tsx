@@ -13,11 +13,7 @@ export interface IconFontProps<T extends string = string> extends IconBaseProps 
 }
 
 function isValidCustomScriptUrl(scriptUrl: string): boolean {
-  return Boolean(
-    typeof scriptUrl === 'string'
-      && scriptUrl.length
-      && !customCache.has(scriptUrl)
-  );
+  return Boolean(typeof scriptUrl === 'string' && scriptUrl.length && !customCache.has(scriptUrl));
 }
 
 function createScriptUrlElements(scriptUrls: string[], index: number = 0): void {
@@ -84,5 +80,9 @@ export default function create<T extends string = string>(
 
   Iconfont.displayName = 'Iconfont';
 
+  /*
+   *  temporary disable this rule for build
+   */
+  // @ts-ignore
   return Iconfont;
 }

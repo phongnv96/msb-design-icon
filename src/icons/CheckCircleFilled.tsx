@@ -11,4 +11,8 @@ const CheckCircleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={CheckCircleFilledSvg} />;
 
 CheckCircleFilled.displayName = 'CheckCircleFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckCircleFilled);

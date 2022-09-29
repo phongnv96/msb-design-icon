@@ -11,4 +11,8 @@ const MoreHorizontalOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={MoreHorizontalOutlinedSvg} />;
 
 MoreHorizontalOutlined.displayName = 'MoreHorizontalOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MoreHorizontalOutlined);

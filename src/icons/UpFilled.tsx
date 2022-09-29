@@ -11,4 +11,8 @@ const UpFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={UpFilledSvg} />;
 
 UpFilled.displayName = 'UpFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UpFilled);

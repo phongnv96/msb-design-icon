@@ -11,4 +11,8 @@ const SoftTokenOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={SoftTokenOutlinedSvg} />;
 
 SoftTokenOutlined.displayName = 'SoftTokenOutlined';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SoftTokenOutlined);

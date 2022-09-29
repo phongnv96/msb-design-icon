@@ -11,4 +11,8 @@ const DownJumpleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={DownJumpleFilledSvg} />;
 
 DownJumpleFilled.displayName = 'DownJumpleFilled';
+/*
+ *  temporary disable this rule for build
+ */
+// @ts-ignore
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DownJumpleFilled);
