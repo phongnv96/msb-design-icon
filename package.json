@@ -1,7 +1,7 @@
 {
-  "name": "@ant-design/icons-svg",
-  "version": "4.2.1",
-  "description": "Abstract nodes for ant design icons.",
+  "name": "msb-icons-svg",
+  "version": "4.2.18",
+  "description": "Abstract nodes for msb design icons.",
   "license": "MIT",
   "sideEffects": false,
   "main": "./lib/index.js",
@@ -13,6 +13,10 @@
     "inline-svg",
     "inline-namespaced-svg"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phongnv96/msb-design-icon.git"
+  },
   "scripts": {
     "build": "cross-env NODE_ENV=production && npm run build:es && npm run build:lib",
     "build-clear": "rimraf es && rimraf lib",
@@ -27,7 +31,6 @@
     "generate-icon": "rimraf src/icons && cross-env TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
     "generate-svg": "rimraf vendors/asn && cross-env NODE_ENV=production gulp --require ts-node/register/transpile-only",
     "lint": "eslint src/ --ext .tsx,.ts",
-    "prepublishOnly": "npm run generate && npm run compile && npm run lint && npm run test",
     "start": "dumi dev",
     "test": "father test",
     "test:local": "npm run generate && npm run compile && npm run test",
@@ -108,6 +111,9 @@
     "ts-node": "^8.6.2",
     "typescript": "^4.0.2",
     "vinyl": "^2.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "react": ">=16.0.0",

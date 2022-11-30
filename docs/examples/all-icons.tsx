@@ -2,6 +2,7 @@ import { ThemeType } from '@ant-design/icons-svg/lib/types';
 import * as React from 'react';
 import styled from 'styled-components';
 import * as AntdIcons from '../../src/icons';
+import * as OtherIcons from '../../src/other';
 
 const Container = styled.div`
   display: flex;
@@ -27,7 +28,7 @@ const NameDescription = styled.p`
 
 const allIcons: {
   [key: string]: any;
-} = AntdIcons;
+} = {...AntdIcons, ...OtherIcons};
 
 const AllIconDemo = () => {
   const [currentTheme, setCurrentTheme] = React.useState('Outlined');
@@ -50,6 +51,7 @@ const AllIconDemo = () => {
           <option value="Filled">Filled</option>
           <option value="Outlined">Outlined</option>
           <option value="TwoTone">Two-Tone</option>
+          <option value="Icon">Other</option>
         </select>
       </div>
       <Container>
