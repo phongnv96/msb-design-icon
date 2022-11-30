@@ -1,14 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import SyncContactFilledSvg from '../../vendors/asn/SyncContactFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SyncContactFilled = (
-  props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
-) => <AntdIcon {...props} ref={ref} icon={SyncContactFilledSvg} />;
+const SyncContactFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <AntdIcon {...props} ref={ref} icon={SyncContactFilledSvg} />
+);
 
 SyncContactFilled.displayName = 'SyncContactFilled';
 /*

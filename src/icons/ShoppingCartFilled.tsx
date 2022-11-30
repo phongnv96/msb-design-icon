@@ -1,14 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import ShoppingCartFilledSvg from '../../vendors/asn/ShoppingCartFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ShoppingCartFilled = (
-  props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
-) => <AntdIcon {...props} ref={ref} icon={ShoppingCartFilledSvg} />;
+const ShoppingCartFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <AntdIcon {...props} ref={ref} icon={ShoppingCartFilledSvg} />
+);
 
 ShoppingCartFilled.displayName = 'ShoppingCartFilled';
 /*

@@ -1,14 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import MpointOutlinedSvg from '../../vendors/asn/MpointOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MpointOutlined = (
-  props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
-) => <AntdIcon {...props} ref={ref} icon={MpointOutlinedSvg} />;
+const MpointOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <AntdIcon {...props} ref={ref} icon={MpointOutlinedSvg} />
+);
 
 MpointOutlined.displayName = 'MpointOutlined';
 /*

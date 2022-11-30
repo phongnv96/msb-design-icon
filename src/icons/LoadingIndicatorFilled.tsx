@@ -1,13 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import LoadingIndicatorFilledSvg from '../../vendors/asn/LoadingIndicatorFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const LoadingIndicatorFilled = (
   props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
+  ref: React.MutableRefObject<HTMLSpanElement>
 ) => <AntdIcon {...props} ref={ref} icon={LoadingIndicatorFilledSvg} />;
 
 LoadingIndicatorFilled.displayName = 'LoadingIndicatorFilled';

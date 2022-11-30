@@ -1,14 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import Sim1OutlinedSvg from '../../vendors/asn/Sim1Outlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Sim1Outlined = (
-  props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
-) => <AntdIcon {...props} ref={ref} icon={Sim1OutlinedSvg} />;
+const Sim1Outlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <AntdIcon {...props} ref={ref} icon={Sim1OutlinedSvg} />
+);
 
 Sim1Outlined.displayName = 'Sim1Outlined';
 /*

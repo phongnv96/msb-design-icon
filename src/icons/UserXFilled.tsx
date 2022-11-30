@@ -1,14 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import UserXFilledSvg from '../../vendors/asn/UserXFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UserXFilled = (
-  props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
-) => <AntdIcon {...props} ref={ref} icon={UserXFilledSvg} />;
+const UserXFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <AntdIcon {...props} ref={ref} icon={UserXFilledSvg} />
+);
 
 UserXFilled.displayName = 'UserXFilled';
 /*
