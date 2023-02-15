@@ -4,3 +4,6 @@ export { default as FileImgIcon } from './FileImgIcon';
 export { default as FilePdfIcon } from './FilePdfIcon';
 export { default as FileXLSXIcon } from './FileXlsxIcon';
 export { default as FileXmlIcon } from './FileXmlIcon';
+export { default as FacebookIcon } from './FacebookIcon';
+export { default as LinkedInIcon } from './LinkedInIcon';
+export { default as YoutubeIcon } from './YoutubeIcon';

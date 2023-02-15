@@ -1,13 +1,14 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react';
+import * as React from 'react'
 import UploadCloudFilledSvg from '../../vendors/asn/UploadCloudFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UploadCloudFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={UploadCloudFilledSvg} />
-);
+const UploadCloudFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={UploadCloudFilledSvg} />;
 
 UploadCloudFilled.displayName = 'UploadCloudFilled';
 /*

@@ -1,13 +1,14 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react';
+import * as React from 'react'
 import UsbOutlinedSvg from '../../vendors/asn/UsbOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UsbOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={UsbOutlinedSvg} />
-);
+const UsbOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={UsbOutlinedSvg} />;
 
 UsbOutlined.displayName = 'UsbOutlined';
 /*

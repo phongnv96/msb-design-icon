@@ -2,6 +2,6 @@
 
 import { IconDefinition } from '../../templates/types';
 
-const CloseOutlined: IconDefinition = {"icon":{"tag":"svg","attrs":{"viewBox":"0 0 24 24","focusable":"false"},"children":[{"tag":"g","attrs":{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"1.5","stroke":"#667085"},"children":[{"tag":"path","attrs":{"d":"M6 18L18 6M18 18L6 6"}}]}]},"name":"close","theme":"outlined"};
+const CloseOutlined: IconDefinition = {"icon":{"tag":"svg","attrs":{"viewBox":"0 0 24 24","focusable":"false"},"children":[{"tag":"path","attrs":{"clip-rule":"evenodd","d":"M18.53 6.53a.75.75 0 00-1.06-1.06L12 10.94 6.53 5.47a.75.75 0 00-1.06 1.06L10.94 12l-5.47 5.47a.75.75 0 101.06 1.06L12 13.06l5.47 5.47a.75.75 0 101.06-1.06L13.06 12l5.47-5.47z","fill-rule":"evenodd"}}]},"name":"close","theme":"outlined"};
 
 export default CloseOutlined;
