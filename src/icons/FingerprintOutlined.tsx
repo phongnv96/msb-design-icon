@@ -1,13 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import FingerprintOutlinedSvg from '../../vendors/asn/FingerprintOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FingerprintOutlined = (
   props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
+  ref: React.MutableRefObject<HTMLSpanElement>
 ) => <AntdIcon {...props} ref={ref} icon={FingerprintOutlinedSvg} />;
 
 FingerprintOutlined.displayName = 'FingerprintOutlined';

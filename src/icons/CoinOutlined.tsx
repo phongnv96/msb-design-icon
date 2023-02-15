@@ -1,14 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import CoinOutlinedSvg from '../../vendors/asn/CoinOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CoinOutlined = (
-  props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
-) => <AntdIcon {...props} ref={ref} icon={CoinOutlinedSvg} />;
+const CoinOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <AntdIcon {...props} ref={ref} icon={CoinOutlinedSvg} />
+);
 
 CoinOutlined.displayName = 'CoinOutlined';
 /*

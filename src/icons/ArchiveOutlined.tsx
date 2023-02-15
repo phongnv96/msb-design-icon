@@ -1,14 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import ArchiveOutlinedSvg from '../../vendors/asn/ArchiveOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ArchiveOutlined = (
-  props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
-) => <AntdIcon {...props} ref={ref} icon={ArchiveOutlinedSvg} />;
+const ArchiveOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <AntdIcon {...props} ref={ref} icon={ArchiveOutlinedSvg} />
+);
 
 ArchiveOutlined.displayName = 'ArchiveOutlined';
 /*

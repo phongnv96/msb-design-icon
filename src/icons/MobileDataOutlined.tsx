@@ -1,14 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import MobileDataOutlinedSvg from '../../vendors/asn/MobileDataOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MobileDataOutlined = (
-  props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
-) => <AntdIcon {...props} ref={ref} icon={MobileDataOutlinedSvg} />;
+const MobileDataOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <AntdIcon {...props} ref={ref} icon={MobileDataOutlinedSvg} />
+);
 
 MobileDataOutlined.displayName = 'MobileDataOutlined';
 /*

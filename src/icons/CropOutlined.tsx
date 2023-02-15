@@ -1,14 +1,13 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import CropOutlinedSvg from '../../vendors/asn/CropOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CropOutlined = (
-  props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>,
-) => <AntdIcon {...props} ref={ref} icon={CropOutlinedSvg} />;
+const CropOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <AntdIcon {...props} ref={ref} icon={CropOutlinedSvg} />
+);
 
 CropOutlined.displayName = 'CropOutlined';
 /*
