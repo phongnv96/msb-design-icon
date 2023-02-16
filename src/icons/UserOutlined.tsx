@@ -5,9 +5,10 @@ import * as React from 'react';
 import UserOutlinedSvg from '../../vendors/asn/UserOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UserOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={UserOutlinedSvg} />
-);
+const UserOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={UserOutlinedSvg} />;
 
 UserOutlined.displayName = 'UserOutlined';
 /*

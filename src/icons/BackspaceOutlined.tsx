@@ -5,9 +5,10 @@ import * as React from 'react';
 import BackspaceOutlinedSvg from '../../vendors/asn/BackspaceOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BackspaceOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={BackspaceOutlinedSvg} />
-);
+const BackspaceOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BackspaceOutlinedSvg} />;
 
 BackspaceOutlined.displayName = 'BackspaceOutlined';
 /*

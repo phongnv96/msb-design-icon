@@ -5,9 +5,10 @@ import * as React from 'react';
 import Sim2OutlinedSvg from '../../vendors/asn/Sim2Outlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Sim2Outlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={Sim2OutlinedSvg} />
-);
+const Sim2Outlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={Sim2OutlinedSvg} />;
 
 Sim2Outlined.displayName = 'Sim2Outlined';
 /*

@@ -5,9 +5,10 @@ import * as React from 'react';
 import ShareLinkFilledSvg from '../../vendors/asn/ShareLinkFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ShareLinkFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={ShareLinkFilledSvg} />
-);
+const ShareLinkFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ShareLinkFilledSvg} />;
 
 ShareLinkFilled.displayName = 'ShareLinkFilled';
 /*

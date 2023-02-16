@@ -5,9 +5,10 @@ import * as React from 'react';
 import FavouriteFilledSvg from '../../vendors/asn/FavouriteFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FavouriteFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={FavouriteFilledSvg} />
-);
+const FavouriteFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FavouriteFilledSvg} />;
 
 FavouriteFilled.displayName = 'FavouriteFilled';
 /*

@@ -5,9 +5,10 @@ import * as React from 'react';
 import BankFilledSvg from '../../vendors/asn/BankFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BankFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={BankFilledSvg} />
-);
+const BankFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BankFilledSvg} />;
 
 BankFilled.displayName = 'BankFilled';
 /*

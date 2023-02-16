@@ -5,9 +5,10 @@ import * as React from 'react';
 import FlashOffOutlinedSvg from '../../vendors/asn/FlashOffOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FlashOffOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={FlashOffOutlinedSvg} />
-);
+const FlashOffOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FlashOffOutlinedSvg} />;
 
 FlashOffOutlined.displayName = 'FlashOffOutlined';
 /*

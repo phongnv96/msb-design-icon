@@ -5,9 +5,10 @@ import * as React from 'react';
 import FlagFilledSvg from '../../vendors/asn/FlagFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FlagFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={FlagFilledSvg} />
-);
+const FlagFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FlagFilledSvg} />;
 
 FlagFilled.displayName = 'FlagFilled';
 /*

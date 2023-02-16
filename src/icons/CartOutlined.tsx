@@ -5,9 +5,10 @@ import * as React from 'react';
 import CartOutlinedSvg from '../../vendors/asn/CartOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CartOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={CartOutlinedSvg} />
-);
+const CartOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CartOutlinedSvg} />;
 
 CartOutlined.displayName = 'CartOutlined';
 /*

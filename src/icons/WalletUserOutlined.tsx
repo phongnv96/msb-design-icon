@@ -5,9 +5,10 @@ import * as React from 'react';
 import WalletUserOutlinedSvg from '../../vendors/asn/WalletUserOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WalletUserOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={WalletUserOutlinedSvg} />
-);
+const WalletUserOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={WalletUserOutlinedSvg} />;
 
 WalletUserOutlined.displayName = 'WalletUserOutlined';
 /*

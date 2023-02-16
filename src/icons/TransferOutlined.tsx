@@ -5,9 +5,10 @@ import * as React from 'react';
 import TransferOutlinedSvg from '../../vendors/asn/TransferOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TransferOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={TransferOutlinedSvg} />
-);
+const TransferOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={TransferOutlinedSvg} />;
 
 TransferOutlined.displayName = 'TransferOutlined';
 /*

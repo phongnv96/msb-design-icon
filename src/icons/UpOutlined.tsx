@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import UpOutlinedSvg from '../../vendors/asn/UpOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 

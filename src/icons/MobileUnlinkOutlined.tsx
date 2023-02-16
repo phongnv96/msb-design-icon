@@ -7,7 +7,7 @@ import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MobileUnlinkOutlined = (
   props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>
+  ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MobileUnlinkOutlinedSvg} />;
 
 MobileUnlinkOutlined.displayName = 'MobileUnlinkOutlined';

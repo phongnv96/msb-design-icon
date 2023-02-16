@@ -5,9 +5,10 @@ import * as React from 'react';
 import MapPinOffOutlinedSvg from '../../vendors/asn/MapPinOffOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MapPinOffOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={MapPinOffOutlinedSvg} />
-);
+const MapPinOffOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={MapPinOffOutlinedSvg} />;
 
 MapPinOffOutlined.displayName = 'MapPinOffOutlined';
 /*

@@ -5,9 +5,10 @@ import * as React from 'react';
 import PhoneGroupOutlinedSvg from '../../vendors/asn/PhoneGroupOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PhoneGroupOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={PhoneGroupOutlinedSvg} />
-);
+const PhoneGroupOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={PhoneGroupOutlinedSvg} />;
 
 PhoneGroupOutlined.displayName = 'PhoneGroupOutlined';
 /*

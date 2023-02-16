@@ -7,7 +7,7 @@ import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MessageBox2Outlined = (
   props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>
+  ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MessageBox2OutlinedSvg} />;
 
 MessageBox2Outlined.displayName = 'MessageBox2Outlined';

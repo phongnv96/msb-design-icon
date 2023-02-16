@@ -5,9 +5,10 @@ import * as React from 'react';
 import CarFilledSvg from '../../vendors/asn/CarFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CarFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={CarFilledSvg} />
-);
+const CarFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CarFilledSvg} />;
 
 CarFilled.displayName = 'CarFilled';
 /*

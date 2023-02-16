@@ -5,9 +5,10 @@ import * as React from 'react';
 import FileNoteOutlinedSvg from '../../vendors/asn/FileNoteOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileNoteOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={FileNoteOutlinedSvg} />
-);
+const FileNoteOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FileNoteOutlinedSvg} />;
 
 FileNoteOutlined.displayName = 'FileNoteOutlined';
 /*

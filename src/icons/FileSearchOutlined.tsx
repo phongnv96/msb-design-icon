@@ -5,9 +5,10 @@ import * as React from 'react';
 import FileSearchOutlinedSvg from '../../vendors/asn/FileSearchOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileSearchOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={FileSearchOutlinedSvg} />
-);
+const FileSearchOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FileSearchOutlinedSvg} />;
 
 FileSearchOutlined.displayName = 'FileSearchOutlined';
 /*

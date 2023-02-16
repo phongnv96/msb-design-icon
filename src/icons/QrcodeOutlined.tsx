@@ -5,9 +5,10 @@ import * as React from 'react';
 import QrcodeOutlinedSvg from '../../vendors/asn/QrcodeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const QrcodeOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={QrcodeOutlinedSvg} />
-);
+const QrcodeOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={QrcodeOutlinedSvg} />;
 
 QrcodeOutlined.displayName = 'QrcodeOutlined';
 /*

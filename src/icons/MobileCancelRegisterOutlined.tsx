@@ -7,7 +7,7 @@ import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MobileCancelRegisterOutlined = (
   props: AntdIconProps,
-  ref: React.MutableRefObject<HTMLSpanElement>
+  ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MobileCancelRegisterOutlinedSvg} />;
 
 MobileCancelRegisterOutlined.displayName = 'MobileCancelRegisterOutlined';

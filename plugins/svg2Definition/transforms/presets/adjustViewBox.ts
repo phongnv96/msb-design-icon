@@ -16,7 +16,6 @@ const OLD_ICON_NAMES = [
   'caret-right',
   'retweet',
   'swap-left',
-  'swap-right',
   'loading',
   'loading-3-quarters',
   'coffee',

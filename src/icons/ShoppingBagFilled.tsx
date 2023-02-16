@@ -5,9 +5,10 @@ import * as React from 'react';
 import ShoppingBagFilledSvg from '../../vendors/asn/ShoppingBagFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ShoppingBagFilled = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={ShoppingBagFilledSvg} />
-);
+const ShoppingBagFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ShoppingBagFilledSvg} />;
 
 ShoppingBagFilled.displayName = 'ShoppingBagFilled';
 /*

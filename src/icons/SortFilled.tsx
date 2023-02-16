@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import * as React from 'react';
 import SortFilledSvg from '../../vendors/asn/SortFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 

@@ -5,9 +5,10 @@ import * as React from 'react';
 import AnchorOutlinedSvg from '../../vendors/asn/AnchorOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AnchorOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={AnchorOutlinedSvg} />
-);
+const AnchorOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={AnchorOutlinedSvg} />;
 
 AnchorOutlined.displayName = 'AnchorOutlined';
 /*

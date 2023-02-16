@@ -5,9 +5,10 @@ import * as React from 'react';
 import MicOnOutlinedSvg from '../../vendors/asn/MicOnOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MicOnOutlined = (props: AntdIconProps, ref: React.MutableRefObject<HTMLSpanElement>) => (
-  <AntdIcon {...props} ref={ref} icon={MicOnOutlinedSvg} />
-);
+const MicOnOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={MicOnOutlinedSvg} />;
 
 MicOnOutlined.displayName = 'MicOnOutlined';
 /*
