@@ -16,7 +16,6 @@ const OLD_ICON_NAMES = [
   'caret-right',
   'retweet',
   'swap-left',
-  'loading',
   'loading-3-quarters',
   'coffee',
   'bars',
@@ -27,9 +26,6 @@ const OLD_ICON_NAMES = [
   'medium-workmark'
 ];
 
-export const adjustViewBox: TransformFactory = assignAttrsAtTag(
-  'svg',
-  ({ name }) => ({
-    viewBox: includes(name, OLD_ICON_NAMES) ? '0 0 1024 1024' : '0 0 24 24'
-  })
-);
+export const adjustViewBox: TransformFactory = assignAttrsAtTag('svg', ({ name }) => ({
+  viewBox: includes(name, OLD_ICON_NAMES) ? '0 0 1024 1024' : '0 0 24 24'
+}));

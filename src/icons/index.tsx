@@ -139,6 +139,7 @@ export { default as LeftJumpleOutlined } from './LeftJumpleOutlined';
 export { default as LeftOutlined } from './LeftOutlined';
 export { default as LinkOutlined } from './LinkOutlined';
 export { default as ListInvestOutlined } from './ListInvestOutlined';
+export { default as LoadingOutlined } from './LoadingOutlined';
 export { default as LockOutlined } from './LockOutlined';
 export { default as LockedFilled } from './LockedFilled';
 export { default as LogInOutlined } from './LogInOutlined';
