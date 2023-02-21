@@ -1,6 +1,6 @@
 {
   "name": "msb-icons-svg",
-  "version": "4.2.22",
+  "version": "4.2.23",
   "description": "Abstract nodes for msb design icons.",
   "license": "MIT",
   "sideEffects": false,
@@ -27,7 +27,7 @@
     "compile": "father build",
     "postcompile": "npm run clean && cross-env TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry",
     "digest": "node scripts/digest.js",
-    "g": "npm run generate",
+    "g": "npm run generate-svg && npm run generate-icon",
     "generate-icon": "rimraf src/icons && cross-env TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
     "generate-svg": "rimraf vendors/asn && cross-env NODE_ENV=production gulp --require ts-node/register/transpile-only",
     "lint": "eslint src/ --ext .tsx,.ts",
