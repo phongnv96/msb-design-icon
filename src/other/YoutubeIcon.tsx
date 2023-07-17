@@ -12,8 +12,8 @@ const svg = () => (
     />
   </svg>
 );
-const YoutubeIcon = (props: Partial<CustomIconComponentProps>) => (
-  <Icon component={svg} {...props} />
+const YoutubeIcon = (props: Partial<CustomIconComponentProps>,  ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <Icon ref={ref} component={svg} {...props} />
 );
 YoutubeIcon.displayName = 'YoutubeIcon';
 /*

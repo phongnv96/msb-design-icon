@@ -35,8 +35,8 @@ const svg = () => (
     />
   </svg>
 );
-const FileXlsxIcon = (props: Partial<CustomIconComponentProps>) => (
-  <Icon component={svg} {...props} />
+const FileXlsxIcon = (props: Partial<CustomIconComponentProps>,  ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <Icon ref={ref} component={svg} {...props} />
 );
 FileXlsxIcon.displayName = 'FileXlsxIcon';
 /*

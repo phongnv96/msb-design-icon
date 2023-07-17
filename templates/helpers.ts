@@ -31,10 +31,7 @@ export function renderIconDefinitionToSVGElement(
   return renderAbstractNodeToSVGElement(icond.icon, options);
 }
 
-function renderAbstractNodeToSVGElement(
-  node: AbstractNode,
-  options: HelperRenderOptions
-): string {
+function renderAbstractNodeToSVGElement(node: AbstractNode, options: HelperRenderOptions): string {
   const targetAttrs =
     node.tag === 'svg'
       ? {

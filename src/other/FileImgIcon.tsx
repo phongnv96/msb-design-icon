@@ -31,8 +31,8 @@ const svg = () => (
     />
   </svg>
 );
-const FileImgIcon = (props: Partial<CustomIconComponentProps>) => (
-  <Icon component={svg} {...props} />
+const FileImgIcon = (props: Partial<CustomIconComponentProps>,  ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <Icon ref={ref} component={svg} {...props} />
 );
 FileImgIcon.displayName = 'FileImgIcon';
 /*

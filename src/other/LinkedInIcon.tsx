@@ -12,8 +12,8 @@ const svg = () => (
     />
   </svg>
 );
-const LinkedInIcon = (props: Partial<CustomIconComponentProps>) => (
-  <Icon component={svg} {...props} />
+const LinkedInIcon = (props: Partial<CustomIconComponentProps>,  ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <Icon ref={ref} component={svg} {...props} />
 );
 LinkedInIcon.displayName = 'LinkedInIcon';
 /*

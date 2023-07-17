@@ -19,10 +19,24 @@ import { ExtractRegExp } from './tasks/creators/generateInline';
 import { IconDefinition } from './templates/types';
 import { getIdentifier } from './utils';
 
-const iconTemplate = readFileSync(
-  resolve(__dirname, './templates/icon.ts.ejs'),
-  'utf8'
-);
+const iconTemplate = readFileSync(resolve(__dirname, './templates/icon.ts.ejs'), 'utf8');
+
+const strReplace = ['fillRule', 'clip-path'];
+
+function snakeToCamel(str) {
+  const newStr = str;
+  return newStr.replace(/([-_][a-z])/g, (group) =>
+    group.toUpperCase().replace('-', '').replace('_', '')
+  );
+}
+
+function convertToCamelCase(content: any, strReplace: string[]) {
+  strReplace.forEach((str) => {
+    const strCamel = snakeToCamel(str);
+    content.replace(str, strCamel);
+  });
+  return content;
+}
 
 export default series(
   // 1. clean
@@ -41,15 +55,17 @@ export default series(
       from: ['vendors/svg/filled/*.svg'],
       toDir: 'vendors/asn',
       svgoConfig: generalConfig,
-      extraNodeTransformFactories: [
-        assignAttrsAtTag('svg', { focusable: 'false' }),
-        adjustViewBox
-      ],
+      extraNodeTransformFactories: [assignAttrsAtTag('svg', { focusable: 'false' }), adjustViewBox],
       stringify: JSON.stringify,
       template: iconTemplate,
       mapToInterpolate: ({ name, content }) => ({
         identifier: getIdentifier({ name, themeSuffix: 'Filled' }),
-        content
+        content: content
+          .replace('fillRule', 'fillRule')
+          .replace('clip-path', 'clipPath')
+          .replace('stroke-linecap', 'strokeLinecap')
+          .replace('stroke-width', 'strokeWidth')
+          .replace('clip-rule', 'clipRule')
       }),
       filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Filled' })
     }),
@@ -60,15 +76,17 @@ export default series(
       from: ['vendors/svg/outlined/*.svg'],
       toDir: 'vendors/asn',
       svgoConfig: generalConfig,
-      extraNodeTransformFactories: [
-        assignAttrsAtTag('svg', { focusable: 'false' }),
-        adjustViewBox
-      ],
+      extraNodeTransformFactories: [assignAttrsAtTag('svg', { focusable: 'false' }), adjustViewBox],
       stringify: JSON.stringify,
       template: iconTemplate,
       mapToInterpolate: ({ name, content }) => ({
         identifier: getIdentifier({ name, themeSuffix: 'Outlined' }),
-        content
+        content: content
+          .replace('fillRule', 'fillRule')
+          .replace('clip-path', 'clipPath')
+          .replace('stroke-linecap', 'strokeLinecap')
+          .replace('stroke-width', 'strokeWidth')
+          .replace('clip-rule', 'clipRule')
       }),
       filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Outlined' })
     }),
@@ -88,7 +106,12 @@ export default series(
       template: iconTemplate,
       mapToInterpolate: ({ name, content }) => ({
         identifier: getIdentifier({ name, themeSuffix: 'TwoTone' }),
-        content
+        content: content
+          .replace('fillRule', 'fillRule')
+          .replace('clip-path', 'clipPath')
+          .replace('stroke-linecap', 'strokeLinecap')
+          .replace('stroke-width', 'strokeWidth')
+          .replace('clip-rule', 'clipRule')
       }),
       filename: ({ name }) => getIdentifier({ name, themeSuffix: 'TwoTone' })
     })

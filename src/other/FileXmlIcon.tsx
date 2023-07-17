@@ -31,8 +31,8 @@ const svg = () => (
     <path d="M18.7228 20.9727V17.7H19.5138V20.3303H20.8753V20.9727H18.7228Z" fill="white" />
   </svg>
 );
-const FileXmlIcon = (props: Partial<CustomIconComponentProps>) => (
-  <Icon component={svg} {...props} />
+const FileXmlIcon = (props: Partial<CustomIconComponentProps>,  ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <Icon ref={ref} component={svg} {...props} />
 );
 FileXmlIcon.displayName = 'FileXmlIcon';
 /*

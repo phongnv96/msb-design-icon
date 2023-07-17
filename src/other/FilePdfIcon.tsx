@@ -34,8 +34,8 @@ const svg = () => (
     />
   </svg>
 );
-const FilePdfIcon = (props: Partial<CustomIconComponentProps>) => (
-  <Icon component={svg} {...props} />
+const FilePdfIcon = (props: Partial<CustomIconComponentProps>,  ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <Icon ref={ref} component={svg} {...props} />
 );
 FilePdfIcon.displayName = 'FilePdfIcon';
 /*

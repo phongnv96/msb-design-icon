@@ -34,8 +34,8 @@ const svg = () => (
     />
   </svg>
 );
-const FileDocIcon = (props: Partial<CustomIconComponentProps>) => (
-  <Icon component={svg} {...props} />
+const FileDocIcon = (props: Partial<CustomIconComponentProps>,  ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <Icon ref={ref} component={svg} {...props} />
 );
 FileDocIcon.displayName = 'FileDoc';
 /*

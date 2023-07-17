@@ -12,8 +12,8 @@ const svg = () => (
     />
   </svg>
 );
-const FacebookIcon = (props: Partial<CustomIconComponentProps>) => (
-  <Icon component={svg} {...props} />
+const FacebookIcon = (props: Partial<CustomIconComponentProps>,  ref: React.MutableRefObject<HTMLSpanElement>) => (
+  <Icon ref={ref} component={svg} {...props} />
 );
 FacebookIcon.displayName = 'FacebookIcon';
 /*
